@@ -10,4 +10,8 @@ echo "$PERSON1" : What are you doing these days?
 echo "$PERSON2" : I am learning DevOps.
 echo "$PERSON1" : That's awesome! DevOps is a great field.
 
-   
+
+# End of the script
+# This script demonstrates the use of variables in bash scripting
+# It defines two variables PERSON1 and PERSON2 and uses them in echo statements to simulate a conversation.
+
