@@ -8,3 +8,5 @@ echo "Third fruit: ${FRUITS[2]}"
 echo "All fruits: ${FRUITS[@]}"
 
 a = $(date)
+echo $a
+
