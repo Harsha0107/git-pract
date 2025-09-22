@@ -18,4 +18,5 @@ echo "current logged in users: $(uptime)"
 echo "current memory usage: $(free -h)"
 echo "current disk usage: $(df -h)"
 echo "current running processes: $(ps -aux)"
-
+echo "PID of the script executing now : $$"
+ "
