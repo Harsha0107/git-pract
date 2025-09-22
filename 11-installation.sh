@@ -1,9 +1,13 @@
 #!/bin/bash
 
-USERID=$(id -u)
-
+#USERID=$(id -u)
 #echo "User ID is $USERID"
-if [ $USERID -ne 0 ]
-then 
-  echo "Please run as root user"
-fi
+#if [ $USERID -ne 0 ]
+#then 
+ # echo "Please run as root user"
+#fi
+
+
+ls -ltr 
+ls -l
+ls -la 
