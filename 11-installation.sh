@@ -12,16 +12,15 @@ fi
 dnf list install git -y
 if [ $? -ne 0 ]
 then
-echo "Git installation failed"
-dnf install git -y
-if [ $? -ne 0 ]
-then
-echo "Git installation is not success..."
-exit 1
-
+    echo "Git installation failed"
+    dnf install git -y
+    if [ $? -ne 0 ]
+    then
+        echo "Git installation is not success..."
+    exit 1
+    else
+        echo "Git installation is successful"
+    fi
 else
-echo "Git is already installed"
+        echo "Git is already installed"
 fi
-
-git --version
-
