@@ -19,4 +19,5 @@ echo "current memory usage: $(free -h)"
 echo "current disk usage: $(df -h)"
 echo "current running processes: $(ps -aux)"
 echo "PID of the script executing now : $$"
- "
+sleep 100 &
+echo "PID of the last background command : $!"
