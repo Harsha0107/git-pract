@@ -1,0 +1,17 @@
+echo Hello world
+
+echo -e "\e[31m haRsha"
+echo -e "\e[32m haRsha"
+echo -e "\e[33m haRsha"
+echo -e "\e[34m haRsha"
+echo -e "\e[35m haRsha"
+echo -e "\e[36m haRsha"
+echo -e "\e[37m haRsha"
+echo -e "\e[90m haRsha"
+echo -e "\e[91m haRsha"
+echo -e "\e[92m haRsha"
+echo -e "\e[93m haRsha"
+echo -e "\e[94m haRsha"
+echo -e "\e[95m haRsha"
+echo -e "\e[96m haRsha"
+echo -e "\e[97m haRsha"
