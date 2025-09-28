@@ -34,7 +34,19 @@ VALIATE(){
     fi 
 }
 
+USAGE(){
+   echo -e "$R USAGE: sudo sh 16-REDIRECTORIES.sh package1 package2 package3...$N"
+   exit 1
+}
+
 CHECK_ROOT
+
+if [ $# -eq 0 ]
+then 
+    USAGE
+    exit 1
+fi
+
 
 for package in $@ #$@ is special variable which takes all the arguments passed to the script
 do 
@@ -45,7 +57,7 @@ do
         dnf install $package -y &>>$LOG_FILE
         VALIDATE $? "$package installation" 
 else
-    echo "$package is already $Y installed $N" &>>$LOG_FILE
+    echo -e "$package is already $Y installed $N" &>>$LOG_FILE
     fi
 done
 
