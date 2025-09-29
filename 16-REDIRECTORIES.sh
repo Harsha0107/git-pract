@@ -38,7 +38,8 @@ USAGE(){
    echo -e "$R USAGE: sudo sh 16-REDIRECTORIES.sh package1 package2 package3...$N"
    exit 1
 }
-echo "script started on: $(date)"
+echo "script started on: $(date)" &>>$LOG_FILE
+
 
 CHECK_ROOT
 
