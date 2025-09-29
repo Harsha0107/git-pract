@@ -19,7 +19,7 @@ W="\e[37m"
 CHECK_ROOT() {
   if [ $USERID -ne 0 ]; 
   then
-    echo -e "$R please run as root PRIVILAGES $N" &>>$LOG_FILE
+    echo -e "$R please run as root PRIVILAGES $N" | tee -a $LOG_FILE
     exit 1
   fi
 }
@@ -55,11 +55,11 @@ do
     dnf list installed $package  &>>$LOG_FILE
     if [$? -ne 0]
     then 
-        echo "$package is not installed, going to installing it now" &>>$LOG_FILE
+        echo "$package is not installed, going to installing it now" | tee -a &>>$LOG_FILE
         dnf install $package -y &>>$LOG_FILE
         VALIDATE $? "$package installation" 
 else
-    echo -e "$package is already $Y installed $N" &>>$LOG_FILE
+    echo -e "$package is already $Y installed $N" | tee -a &>>$LOG_FILE
     fi
 done
 
