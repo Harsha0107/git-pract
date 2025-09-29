@@ -53,13 +53,13 @@ fi
 for package in $@ #$@ is special variable which takes all the arguments passed to the script
 do 
     dnf list installed $package  &>>$LOG_FILE
-    if [$? -ne 0]
+    if [ $? -ne 0 ]
     then 
-        echo "$package is not installed, going to installing it now" | tee -a &>>$LOG_FILE
+        echo "$package is not installed, going to installing it now" | tee -a $LOG_FILE
         dnf install $package -y &>>$LOG_FILE
         VALIDATE $? "$package installation" 
 else
-    echo -e "$package is already $Y installed $N" | tee -a &>>$LOG_FILE
+    echo -e "$package is already $Y installed $N" | tee -a $LOG_FILE
     fi
 done
 
